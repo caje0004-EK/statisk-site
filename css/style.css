@@ -1,10 +1,3 @@
-.category_list_container,
-.product_list_container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
 .category_list_container a {
   background-color: bisque;
   padding: 2rem 3rem;
