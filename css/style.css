@@ -2,3 +2,9 @@
   background-color: bisque;
   padding: 2rem 3rem;
 }
+
+.product_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 0.5rem;
+}
