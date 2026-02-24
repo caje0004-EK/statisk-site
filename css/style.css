@@ -9,21 +9,42 @@
   gap: 0.5rem;
 }
 
+.product_info {
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  margin-top: 0.3rem;
+}
+
 /* udsalg */
+.sale-box,
+.sale-price {
+  display: none;
+}
+
+.sale .sale-box,
+.sale .sale-price {
+  display: block;
+}
 .sale a {
   display: grid;
 }
 
-.sale-box {
+.sale .sale-box {
   background-color: firebrick;
   max-width: max-content;
-  color: white;
   padding: 0.5rem;
   position: absolute;
   margin: 0.5rem;
+  border-radius: 8px;
 }
 
-.old-price {
+.sale .sale-box p {
+  color: #fff;
+}
+
+.sale .old-price {
   text-decoration: line-through;
   color: rgb(118, 118, 118);
   margin-left: 0.8rem;
@@ -33,10 +54,22 @@
   display: flex;
 }
 
+.sale .sale-price {
+  color: firebrick;
+}
 /* sold out */
 .soldout a {
   display: grid;
 }
+
+.sold-text {
+  display: none;
+}
+
+.soldout .sold-text {
+  display: block;
+}
+
 .soldout img {
   filter: opacity(60%) brightness(50%) grayscale(70%);
   grid-area: 1/1;
@@ -48,4 +81,6 @@
 }
 
 .sold-text p {
+  font-weight: 600;
+  font-size: 50px;
 }
