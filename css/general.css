@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+h1,
 h2,
 h3,
 p,
@@ -12,4 +13,28 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 0.5rem;
+}
+
+/* header */
+header {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h1 span {
+  color: cornflowerblue;
+}
+
+header ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 }

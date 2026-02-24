@@ -10,6 +10,9 @@ main {
   margin: 1rem;
 }
 a {
-  list-style-type: none;
   text-decoration: none;
+}
+
+li {
+  list-style-type: none;
 }
