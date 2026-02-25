@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
+h1,
 h2,
 h3,
+h4,
 p,
 a {
   font-family: "Montserrat";
@@ -12,4 +14,53 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 0.5rem;
+}
+
+/* header */
+header {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h1 span {
+  color: cornflowerblue;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+header ul {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* breadcrumbs */
+.breadcrumbs {
+  margin: 1rem 0;
+}
+
+.breadcrumbs ul {
+  display: flex;
+}
+
+.breadcrumbs li {
+  font-size: 14px;
+}
+.breadcrumbs li::after {
+  content: "/";
+  margin: 0 0.5ch;
+}
+
+.breadcrumbs li:last-child::after {
+  content: "";
 }

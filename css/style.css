@@ -17,6 +17,7 @@
   margin-top: 0.3rem;
 }
 
+/* PRODUKTLISTE */
 /* udsalg */
 .sale-box,
 .sale-price {
@@ -70,7 +71,7 @@
   display: block;
 }
 
-.soldout img {
+.product_list_container .soldout img {
   filter: opacity(60%) brightness(50%) grayscale(70%);
   grid-area: 1/1;
 }
@@ -83,4 +84,94 @@
 .sold-text p {
   font-weight: 600;
   font-size: 50px;
+}
+
+/* PRODUKTSIDE */
+.product-info {
+  margin-left: 1rem;
+}
+
+.product-info .price {
+  margin: 1rem 0;
+  font-size: 20px;
+}
+
+/* forms */
+.purchase form {
+  margin: 2rem 0;
+}
+.purchase fieldset {
+  border: none;
+}
+
+.purchase h4 {
+  margin: 1ch 0;
+  font-size: 18px;
+  font-weight: 450;
+}
+
+.purchase label {
+  border: 0.5px solid #474747;
+  border-radius: 4px;
+  padding: 0.7rem;
+  margin: 0.5rem 0.4rem 1rem 0;
+  font-size: 15px;
+  font-family: "Montserrat";
+  color: #353535;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s allow-discrete;
+
+  &:hover {
+    background-color: rgb(22, 22, 22);
+    color: #fff;
+  }
+
+  &:has(input:checked) {
+    background-color: rgb(22, 22, 22);
+    color: #fff;
+  }
+}
+
+.purchase input {
+  display: none;
+}
+
+.purchase div {
+  display: flex;
+  max-width: 650px;
+}
+
+.purchase button {
+  border: none;
+  border-radius: 4px;
+  padding: 0.7rem;
+  margin: 0.5rem 0.4rem 1rem 0;
+  font-size: 15px;
+  font-family: "Montserrat";
+  background-color: cornflowerblue;
+  color: #fff;
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s allow-discrete;
+
+  &:hover {
+    background-color: rgb(22, 22, 22);
+  }
+
+  &:active {
+    transform: scale(1.1);
+  }
+}
+
+.purchase .soldout {
+  background-color: rgb(130, 130, 130);
+  pointer-events: none;
+
+  &:not(.selected):hover {
+    background-color: rgb(130, 130, 130);
+    color: #353535;
+  }
 }
