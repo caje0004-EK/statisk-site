@@ -38,3 +38,24 @@ header ul {
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+/* breadcrumbs */
+.breadcrumbs {
+  margin: 1rem 0;
+}
+
+.breadcrumbs ul {
+  display: flex;
+}
+
+.breadcrumbs li {
+  font-size: 14px;
+}
+.breadcrumbs li::after {
+  content: "/";
+  margin: 0 0.5ch;
+}
+
+.breadcrumbs li:last-child::after {
+  content: "";
+}
