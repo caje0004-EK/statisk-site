@@ -17,6 +17,42 @@
   margin-top: 0.3rem;
 }
 
+/* hero */
+#index main {
+  margin: 0;
+  display: grid;
+}
+
+#hero,
+#hero-content {
+  grid-area: 1/1;
+}
+
+#hero-content {
+  place-self: center;
+}
+
+#hero-content h1 {
+  color: #fff;
+}
+
+.cta {
+  padding: 1rem 3rem;
+  background-color: white;
+  place-self: center;
+  margin: 1rem 0;
+
+  &:hover {
+    background-color: cornflowerblue;
+    transition: 0.4s allow-discrete;
+    cursor: pointer;
+  }
+}
+
+#index header {
+  margin-bottom: 0;
+}
+
 /* PRODUKTLISTE */
 /* udsalg */
 .sale-box,
