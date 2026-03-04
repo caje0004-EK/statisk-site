@@ -5,7 +5,7 @@ fetch("https://kea-alt-del.dk/t7/api/categories") // laver request til adresse p
   .then((data) => {
     // henter data fra array, og tilføjer det i brugergrænsefladen //
     data.forEach((category) => {
-      categoryContainer.innerHTML += `<a href="produktliste.html">${category.category}</a>`;
+      categoryContainer.innerHTML += `<a href="produktliste.html?category=${category.category}">${category.category}</a>`;
     });
     console.log(data);
   });
