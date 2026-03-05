@@ -25,7 +25,7 @@ function showProducts(productlistArr) {
           </a>
           <a href="produkt.html?id=${product.id}"><p class="product-name">${product.productdisplayname}</p></a>
           <div class="price">
-            <p class="sale-price">DKK 591,20</p>
+            <p class="sale-price">DKK ${Math.ceil(product.price - (product.discount / 100) * product.price)}</p>
             <p class="old-price">DKK ${product.price}</p>
           </div>
         </article>`;

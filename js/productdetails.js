@@ -20,7 +20,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
           <h2>${data.productdisplayname}</h2>
           <section>
             <div class="price">
-              <p class="sale-price">DKK 719,20</p>
+              <p class="sale-price">DKK ${Math.ceil(data.price - (data.discount / 100) * data.price)}</p>
               <p class="old-price">DKK ${data.price}</p>
             </div>
             <p>Farve: ${data.basecolour}</p>
@@ -33,7 +33,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
                 <legend>
                   <h4>Vælg størrelse</h4>
                 </legend>
-                <div>
+                <div class="size">
                   <label class="${data.soldout ? " soldout" : ""}">
                     <input type="radio" name="size" id="S" />
                     S
@@ -52,8 +52,11 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
                   </label>
                 </div>
               </fieldset>
-              <div>
-                <button>Tilføj til kurv</button>
+              <div class="purchase-btn">
+                <button class="${data.soldout ? " soldout" : ""}">
+                <span>Tilføj til kurv</span>
+                <span>Ikke på lager</span>
+                </button>
               </div>
             </form>
           </section>`;
