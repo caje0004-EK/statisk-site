@@ -4,7 +4,7 @@ const params = new URLSearchParams(window.location.search);
 const category = params.get("category");
 console.log(category);
 
-fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}`).then((res) =>
+fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=40`).then((res) =>
   res.json().then((data) => {
     showProducts(data);
   }),
@@ -12,13 +12,12 @@ fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}`).then((res) 
 
 function showProducts(productlistArr) {
   productlistHeader.innerHTML = `<h2>${category}</h2>`;
-  productlistContainer.innerHTML = "";
   productlistArr.forEach((product) => {
-    productlistContainer.innerHTML += `<article class="product_info">
+    productlistContainer.innerHTML += `<article class="product_info${product.soldout ? " soldout" : ""}${product.discount ? " sale" : ""}">
           <a href="produkt.html?id=${product.id}">
             <img src="https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp" alt="" />
             <div class="sale-box">
-              <p>- 20%</p>
+              <p>- ${product.discount}%</p>
             </div>
             <div class="sold-text">
               <p>UDSOLGT</p>

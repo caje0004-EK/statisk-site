@@ -16,7 +16,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
         <article>
           <img src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp" alt="" />
         </article>
-        <article class="product-info">
+        <article class="product-info${data.discount ? " sale" : ""}">
           <h2>${data.productdisplayname}</h2>
           <section>
             <div class="price">
@@ -34,19 +34,19 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
                   <h4>Vælg størrelse</h4>
                 </legend>
                 <div>
-                  <label>
+                  <label class="${data.soldout ? " soldout" : ""}">
                     <input type="radio" name="size" id="S" />
                     S
                   </label>
-                  <label>
+                  <label class="${data.soldout ? " soldout" : ""}">
                     <input type="radio" name="size" id="M" />
                     M
                   </label>
-                  <label>
+                  <label class="${data.soldout ? " soldout" : ""}">
                     <input type="radio" name="size" id="L" />
                     L
                   </label>
-                  <label>
+                  <label class="${data.soldout ? " soldout" : ""}">
                     <input type="radio" name="size" id="XL" />
                     XL
                   </label>
