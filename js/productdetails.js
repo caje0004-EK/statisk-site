@@ -8,7 +8,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${id}`)
     productContainer.innerHTML = `<section class="breadcrumbs">
         <ul>
           <li><a href="kategorier.html">Kategorier</a></li>
-          <li><a href="produktliste.html">${data.category}</a></li>
+          <li><a href="produktliste.html?category=${data.category}">${data.category}</a></li>
           <li><a href="#">${data.productdisplayname}</a></li>
         </ul>
       </section>
