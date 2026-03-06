@@ -1,7 +1,7 @@
 const productlistContainer = document.querySelector(".product_list_container");
 const productlistHeader = document.querySelector("#productlist-header");
 const params = new URLSearchParams(window.location.search);
-const category = params.get("category");
+let category = params.get("category") ?? "Apparel"; // ?? betyder at når noget er null, så viser den apparel på siden
 console.log(category);
 
 fetch(`https://kea-alt-del.dk/t7/api/products?category=${category}&limit=40`).then((res) =>
